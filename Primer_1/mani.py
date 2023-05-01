@@ -1,22 +1,19 @@
-# Задача 16: Требуется вычислить, сколько раз встречается некоторое число X в массиве A[1..N]. Пользователь
-# в первой строке вводит натуральное число N – количество элементов в массиве. В последующих строках
-# записаны N целых чисел Ai. Последняя строка содержит число X
-# n = 5
-# 1 2 3 4 5
-# x = 3
-
-# -> 1
-
-N = abs(int(input('Введите количество элементов списка А: ')))
-A_entered = input("Введите через пробел элементы списка: ").split()
-A_num = list(map(int, A_entered))
-if len(A_num) != N:
-    print('Введенные элементы не соответствуют заявленному количеству!')
-else:
-    X = int(input('Введите число X, которое необходимо найти в списке: '))
-    count = 0
-    for i in range(N):
-        if A_num[i] == X:
-            count += 1
-    print(f'Число {X} встречается в списке A {count} раз') 
-    
+mol = [int(x) for x in input().split()]
+n = mol[0]
+m = mol[1]
+set_1 = set()
+set_2 = set()
+list_1 = list()
+a = [int(x) for x in input().split()]
+k = set(a)
+for i in k:
+    set_1.add(i)
+b = [int(x) for x in input().split()]
+k1 = set(b)
+for i in k1:
+    set_2.add(i)
+lok = set_1 & set_2
+kool = list(lok)
+kool.sort()
+for i in kool:
+    print(i, end=' ')
